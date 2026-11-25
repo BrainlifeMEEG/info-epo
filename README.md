@@ -1,5 +1,36 @@
 # Create an info text file
 
+<!-- brainlife-app:begin (generated from the App manifest; edit the manifest, not this block) -->
+
+> **Utility that writes the measurement info (channels, sampling rate, filters and other metadata) of an MNE epochs file to a text file for inspection.**
+
+Loads epoched MEG/EEG data with mne.read_epochs and writes str(epochs.info) to info.txt, also showing it in the brainlife process view. Use it to check recording metadata without downloading the data. It reads no parameters.
+
+| | |
+|---|---|
+| 📥 **Inputs** | `neuro/meeg/mne/epochs` |
+| 📤 **Outputs** | `neuro/meg/fif-override` |
+| 🐳 **Container** | `brainlifemeeg/mne:1.12.1` |
+| ⚙️ **Resources** | 1 CPUs |
+| 🔗 **Run it** | [doi.org/10.25663/brainlife.app.818](https://doi.org/10.25663/brainlife.app.818) |
+
+#### 📥 Inputs
+
+| Input | Datatype | Required | Description |
+|---|---|---|---|
+| `epo` | `neuro/meeg/mne/epochs` | yes | Epoched MEG/EEG data (MNE -epo.fif). |
+
+#### 📤 Outputs
+
+| Output | Datatype | Description |
+|---|---|---|
+| `out_dir` | `neuro/meg/fif-override` | Text file (info.txt) with the epochs' info structure. |
+
+📚 **References used by this App:**
+- Gramfort A, et al. MEG and EEG data analysis with MNE-Python. Front Neurosci 7(267):1-13 (2013). [doi:10.3389/fnins.2013.00267](https://doi.org/10.3389/fnins.2013.00267)
+
+<!-- brainlife-app:end -->
+
 [![Run on Brainlife.io](https://img.shields.io/badge/Brainlife-bl.app.818-blue.svg)](https://doi.org/10.25663/brainlife.app.818)
 
 ## Description
